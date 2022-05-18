@@ -22,7 +22,18 @@
     margin:auto;
     position: relative;
 }
-
+.box::before{
+    content: "";
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%,-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--light);
+}
 img{
     width: 180px;
     height: 180px;
@@ -55,8 +66,54 @@ img{
 .music_name{
     font-size: 2rem;
 }
+/* the song slider styles */
+.song_slider{
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+}
+.range-control{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: var(--light);
+    cursor: pointer;
+    overflow: hidden;
+}
+.range-control::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1px;
+    height: 20px;
+    background-color: #ddd;
+    box-shadow: -400px 0 0 400px #fff;
+}
+.current_time,.duration_time{
+    font-size: 1rem;
 
-
+}
+.duration_time{
+    position: absolute;
+    right: 0;
+}
+.controls{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+}
+.ply_btn{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #e9eff3;
+    cursor: pointer;
+    border: none;
+}
+.
 
 
 
