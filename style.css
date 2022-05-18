@@ -16,7 +16,7 @@
     background:var(--light);
 }
 .box{
-    width: 40%;
+    width: 30%;
     height:100vh;
     background-color: var(--dark);
     margin:auto;
@@ -70,7 +70,7 @@ img{
 
 @media (min-width:770px) {
     .box{
-        width: 50%;
+        width: 35%;
     }
     img{
         width: 150px;
@@ -80,6 +80,6 @@ img{
 
 @media (min-width:1024) and (max-width:1200px){
     .box{
-        width: 30%;
+        width: 25%;
     }
 }
