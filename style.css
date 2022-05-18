@@ -10,7 +10,7 @@
 }
 
 .container{
-    max-width: 1200px;
+    max-width: 100%;
     width: 100%;
     height: 100vh;
     background:var(--light);
@@ -22,6 +22,7 @@
     margin:auto;
     position: relative;
 }
+
 img{
     width: 180px;
     height: 180px;
@@ -40,7 +41,20 @@ img{
         transform: rotate(360deg);
     }
 }
+.details{
+  position: absolute;
+  margin-top: 250px;
+  margin-left: 2.5rem;
 
+}
+.music_name,.music_artist{
+    text-align: center;
+    text-transform: capitalize;
+
+}
+.music_name{
+    font-size: 2rem;
+}
 
 
 
