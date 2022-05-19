@@ -1,6 +1,6 @@
 :root{
-    --light:rgb(23 96 131);
-    --dark:#217ca9;
+    --light:rgb(196, 214, 222);
+    --dark:#8b959a;
 }
 
 *{
@@ -9,23 +9,42 @@
     box-sizing: border-box;
 }
 
-.container{
-    max-width: 100%;
+body{
     width: 100%;
     height: 100vh;
-    background:var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark);
+    font-family: 'Times New Roman', Times, serif;
+}
+.container{
+    width: 30%;
+    height: 100vh;
+    border-radius: 20px;
+    background:rgba(255, 255, 255, 0.001);
+    box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    overflow: hidden;
+    color: #fff;
 }
 .box{
-    width: 40%;
-    height:100vh;
+    width: 180px;
+    height:180px;
     background-color: var(--dark);
     margin:auto;
+    border-radius: 50%;
     position: relative;
+    background-image: url(/DonyaSoft\ Wallpaper\ \(8\).jpg);
+    display: block;
+    margin: 40px auto;
+    background-size: cover;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
 }
 .box::before{
     content: "";
     position: absolute;
-    top: 23%;
+    top: 50%;
     left: 50%;
     z-index: 100;
     transform: translate(-50%,-50%);
@@ -34,19 +53,6 @@
     border-radius: 50%;
     background-color: var(--light);
 }
-.img{
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    animation: rotate 20s infinite;
-    position: absolute;
-    right: 0;
-    left: 0;
-    margin: auto;
-    top: 120px;
-    box-shadow: 1px -1px 40px 17px rgb(240 200 100 / 60%);
-}
-
 @keyframes rotate{
     100%{
         transform: rotate(360deg);
@@ -97,7 +103,7 @@
     right: 0;
 }
 .controls{
-    width: 60%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -156,9 +162,9 @@
     }
 }
 /* btns styles */
-.btn{
-    width: 10px;
-    height: 4px ;
+.controls .btn{
+    width: 40px;
+    height: 40px ;
     background: #ddd;
     border-radius: 50%;
     display: flex;
@@ -169,13 +175,12 @@
 }
 
 
-
 /* ========================================= MAKING RESPONSVE ================================= */
 @media (min-width:360px){
     .box{
         width: 70%;
     }
-    img{
+    .img{
         width: 100px;
         height: 100px;
     }
@@ -185,7 +190,7 @@
     .box{
         width: 60%;
     }
-    img{
+    .img{
         width: 130px;
         height: 130px;
     }
@@ -195,7 +200,7 @@
     .box{
         width: 50%;
     }
-    img{
+    .img{
         width: 150px;
         height: 150px;
     }
