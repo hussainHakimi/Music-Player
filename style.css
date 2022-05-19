@@ -32,6 +32,15 @@ body{
     width: 180px;
     height:180px;
     background-color: var(--dark);
+    border-radius: 50%;
+    position: relative;
+    display: block;
+
+}
+.box-img{
+    width: 180px;
+    height:180px;
+    background-color: var(--dark);
     margin:auto;
     border-radius: 50%;
     position: relative;
@@ -41,7 +50,6 @@ body{
     background-size: cover;
     box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
 }
-.box::before{
     content: "";
     position: absolute;
     top: 50%;
@@ -64,6 +72,13 @@ body{
   margin-left: 2.5rem;
 
 }
+
+/* the song slider styles */
+.song_slider{
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+}
 .music_name,.music_artist{
     text-align: center;
     text-transform: capitalize;
@@ -71,12 +86,6 @@ body{
 }
 .music_name{
     font-size: 2rem;
-}
-/* the song slider styles */
-.song_slider{
-    width: 100%;
-    margin: 10px 0;
-    position: relative;
 }
 .range-control{
     -webkit-appearance: none;
@@ -103,40 +112,40 @@ body{
     right: 0;
 }
 .controls{
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 0px;
+
 }
 .ply_btn{
     position: relative;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #e9eff3;
+    background-color: hsl(204, 29%, 93%);
     cursor: pointer;
     border: none;
 }
 .ply_btn span{
     position: absolute;
     top: 50%;
-    left: 55%;
+    left: 25%;
     transform: translateY(-50%);
     width: 10px ;
-    height: 20px;
+    height: 30px;
     border-radius: 2px;
     background: #217ca9;
     transition: .5s;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 .ply_btn span:nth-child(2){
-    left: 25%;
+    left: 55%;
     transform-origin: center;
 }
-.ply_btn.pause span:nth-child(2)
-{
+.ply_btn.pause span:nth-child(2){
     transform: translateY(-50%) scaleY(0);
 }
 .ply_btn.pause span:nth-child(1){
@@ -173,7 +182,14 @@ body{
     border: none;
     cursor: pointer;
 }
-
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 
 /* ========================================= MAKING RESPONSVE ================================= */
 @media (min-width:360px){
