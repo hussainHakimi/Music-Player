@@ -20,18 +20,22 @@ body{
 }
 .container{
     position: relative;
-    width: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
     height: 100vh;
     border-radius: 20px;
-    background:rgba(255, 255, 255, 0.001);
+    background:rgba(193, 19, 19, 0.001);
     box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
     padding: 30px;
     overflow: hidden;
-    color: #fff;
+    color: rgb(251, 239, 239);
 }
+
 .img-section{
     position: absolute;
-    top: 0px;
+    top: 10px;
     left: 26%;;
 }
 .img-section img{
@@ -43,8 +47,8 @@ body{
     display: block;
     margin: 60px auto;
     background-size: cover;
-    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
-    /* animation: rotate 20s linear infinite; */
+    box-shadow: 1px -1px 40px 17px rgba(52, 198, 200, 0.6);
+    animation: rotate 20s linear infinite;
 }
 @keyframes rotate{
     100%{
@@ -187,6 +191,7 @@ body{
     height: 40px;
 }
 /* ========================================= MAKING RESPONSVE ================================= */
+/* 
 @media (min-width:360px){
     .box{
         width: 70%;
@@ -198,7 +203,7 @@ body{
 }
 
 @media (min-width: 600px){
-    .box{
+    .container{
         width: 60%;
     }
     .img{
@@ -221,4 +226,4 @@ body{
     .box{
         width: 30%;
     }
-}
+} */
