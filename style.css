@@ -34,9 +34,7 @@ body{
 }
 
 .img-section{
-    position: absolute;
-    top: 10px;
-    left: 26%;;
+margin: -350px auto 0 auto;
 }
 .img-section img{
     width: 280px;
@@ -58,7 +56,8 @@ body{
 .details{
   position: absolute;
   top: 60%;
-  left: 34%;
+  width: 90%;
+  left: 6%;
 
 }
 
@@ -73,8 +72,12 @@ body{
     text-transform: capitalize;
 
 }
+.music_artist{
+font-size: 2rem;
+margin-bottom: 20px;
+}
 .music_name{
-    font-size: 2rem;
+    font-size: 3rem;
 }
 .range-control{
     -webkit-appearance: none;
@@ -103,7 +106,7 @@ body{
 .controls{
     width: 60%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: auto;
     margin-top: 30px 0px;
@@ -113,8 +116,8 @@ body{
 }
 .ply_btn{
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-color: hsl(204, 29%, 93%);
     cursor: pointer;
@@ -125,8 +128,8 @@ body{
     top: 50%;
     left: 33%;
     transform: translateY(-50%);
-    width: 4px ;
-    height: 10px;
+    width: 6px ;
+    height: 24px;
     border-radius: 2px;
     background: var(--dark);
     transition: .5s;
@@ -163,8 +166,8 @@ body{
 }
 /* btns styles */
 .controls .btn{
-    width: 40px;
-    height: 40px ;
+    width: 60px;
+    height: 60px ;
     background: #ddd;
     border-radius: 50%;
     display: flex;
@@ -176,7 +179,6 @@ body{
     margin-right: -30px;
 }
 .btnNext{
-    margin-left:px ;
 }
 @keyframes rotate{
     0%{
@@ -187,8 +189,8 @@ body{
     }
 }
 .controls img{
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
 }
 /* ========================================= MAKING RESPONSVE ================================= */
 /* 
