@@ -46,7 +46,7 @@ margin: -350px auto 0 auto;
     margin: 60px auto;
     background-size: cover;
     box-shadow: 1px -1px 40px 17px rgba(52, 198, 200, 0.6);
-    animation: rotate 20s linear infinite;
+    /* animation: rotate 200s linear infinite; */
 }
 @keyframes rotate{
     100%{
@@ -180,6 +180,7 @@ margin-bottom: 50px;
 }
 .btnNext{
 }
+
 @keyframes rotate{
     0%{
         transform: rotate(0);
