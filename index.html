@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
         <div class="box">
             <div class="img-section">
-                <img src="./DonyaSoft Wallpaper (8).jpg" alt="">
+                <img src="images/DonyaSoft Wallpaper (8).jpg" class="music-img" alt="">
             </div>
             <div class="details ">
                 <h1 class="music_name">music name</h1>
@@ -25,7 +24,7 @@
                 </div>
                     <div class="controls">
                         <div class="btn btnBack"><img src="img/back_to_64px.png" alt=""></div>
-                        <div class="ply_btn paus">
+                        <div class="ply_btn pause" onclick="playPause()">
                             <span></span>
                             <span></span>
                         </div>
