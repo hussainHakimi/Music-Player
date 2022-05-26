@@ -1,6 +1,5 @@
 const body = document.querySelector('body');
 const contianer = document.querySelector('.container');
-const box = document.querySelector('.box');
 const img_section = document.querySelector('.img-section');
 const music_img = document.querySelector('.music-img');
 const details = document.querySelector('.details');
