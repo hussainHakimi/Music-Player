@@ -36,7 +36,7 @@ body{
 .img-section{
 margin: -350px auto 0 auto;
 }
-.img-section img{
+.img-section .music-img{
     width: 280px;
     height:280px;
     background-color: var(--dark);
@@ -46,7 +46,9 @@ margin: -350px auto 0 auto;
     margin: 60px auto;
     background-size: cover;
     box-shadow: 1px -1px 40px 17px rgba(52, 198, 200, 0.6);
-    /* animation: rotate 200s linear infinite; */
+}
+.rotate{
+    animation: rotate 25s linear infinite;
 }
 @keyframes rotate{
     100%{
