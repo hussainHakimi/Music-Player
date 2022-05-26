@@ -13,6 +13,7 @@ const current_music = document.createElement('audio');
 let track_index = 0;
 let isplaying = false;
 
+// Main coding is start.
 const music_list = [
   {
     img : 'images/DonyaSoft Wallpaper (26).jpg',
