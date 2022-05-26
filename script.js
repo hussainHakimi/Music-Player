@@ -10,7 +10,7 @@ const play = document.querySelector('.ply_btn');
 const btnNext = document.querySelector('.btnNext');
 const current_music = document.createElement('audio');
 
-let track_index = 0;
+let index = 0;
 let isplaying = false;
 
 // Main coding is start.
@@ -35,14 +35,14 @@ const music_list = [
   }
 ];
 
-loadTrack(track_index);
+loadTrack(index);
 
-function loadTrack(track_index) {
-  current_music.src = music_list[track_index].music;
+function loadTrack(index) {
+  current_music.src = music_list[index].music;
   current_music.load();
-  music_name.textContent = music_list[track_index].name;
-  music_artist.textContent = music_list[track_index].artist;
-  music_img.src = music_list[track_index].img;
+  music_name.textContent = music_list[index].name;
+  music_artist.textContent = music_list[index].artist;
+  music_img.src = music_list[index].img;
 }
 
 function playPause(){
