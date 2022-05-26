@@ -35,9 +35,9 @@ const music_list = [
   }
 ];
 
-loadTrack(index);
+loadMusic(index);
 
-function loadTrack(index) {
+function loadMusic(index) {
   current_music.src = music_list[index].music;
   current_music.load();
   music_name.textContent = music_list[index].name;
