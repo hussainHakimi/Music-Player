@@ -17,8 +17,6 @@ const current_music = document.createElement('audio');
 let track_index = 0;
 let isplaying = false;
 
-
-
 const music_list = [
   {
     img : 'images/DonyaSoft Wallpaper (26).jpg',
@@ -40,39 +38,29 @@ const music_list = [
   }
 ];
 
-
 loadTrack(track_index);
 
 function loadTrack(track_index) {
   current_music.src = music_list[track_index].music;
   current_music.load();
-
   music_name.textContent = music_list[track_index].name;
   music_artist.textContent = music_list[track_index].artist;
   music_img.src = music_list[track_index].img;
 }
 
-
 function playPause(){
-  isplaying ? puaseMusic() : playMusic();
+  if (isplaying){
+      current_music.pause();
+      isplaying = false;
+      music_img.classList.remove('rotate');
+    
+  }else{
+      current_music.play();
+      isplaying = true;
+      music_img.classList.add('rotate');
+  }
 }
-
-function playMusic(){
-  current_music.play();
-  isplaying = true;
-  play.addEventListener('click', () => {
-    play.classList.add('.pause');
-  });
-}
-
-function puaseMusic(){
-  current_music.pause();
-  isplaying = false;
-}
-
 
 play.addEventListener('click', () => {
   play.classList.toggle('pause');
 });
-
-
