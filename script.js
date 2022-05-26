@@ -1,6 +1,5 @@
 const img_section = document.querySelector('.img-section');
 const music_img = document.querySelector('.music-img');
-const details = document.querySelector('.details');
 const music_name = document.querySelector('.music_name');
 const music_artist = document.querySelector('.music_artist');
 const range_control = document.querySelector('.range-control');
