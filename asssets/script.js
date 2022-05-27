@@ -17,7 +17,7 @@ let songs = [
         name:'Arash',
         path:'song1.mp3',
         artist:'artist1',
-        imgcover:'/img/coverimg1.jpg'
+        imgcover:'../img/coverimg1.jpg'
     },
     {
         name:'Arash',
