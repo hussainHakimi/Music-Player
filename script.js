@@ -12,7 +12,7 @@ const current_music = document.createElement('audio');
 
 let index = 0;
 let isplaying = false;
-
+let timer;
 // Main coding is start.
 const music_list = [
   {
@@ -38,16 +38,17 @@ const music_list = [
 loadMusic(index);
 
 function loadMusic(index) {
+  clearInterval(timer);
   current_music.src = music_list[index].music;
   current_music.load();
   music_name.textContent = music_list[index].name;
   music_artist.textContent = music_list[index].artist;
   music_img.src = music_list[index].img;
+  current_time.innerHTML = '00:00';
   
-  // setUpdate()
+  timer = setInterval(update, 1000);
+
 }
-
-
 
 
 function playPause(){
@@ -67,56 +68,29 @@ play.addEventListener('click', () => {
   play.classList.toggle('pause');
 });
 
-// current_music.addeventListener('ontimeupdate', () => {
-//   current_time.innerHTML = Math.floor(this.currentTime) + ' / ' + Math.floor(this.duration);
-// });
-
-// ====================================== Duration Coding =================================================
-
-
-// function updateTime(){
-  
-//     let currentMinutes = Math.floor(current_music.currentTime / 60);
-//     let currentSeconds = Math.floor(current_music.currentTime - currentMinutes * 60 );
-//     let durationMinutes = Math.floor(current_music.duration / 60 );
-//     let durationSeconds = Math.floor(current_music.duration - durationMinutes * 60 );
-//     console.log(durationMinutes);
-    
-//     if(currentSeconds < 10 ){currentSeconds = '0' + currentSeconds; }
-//     if(durationSeconds < 10 ){ durationSeconds = '0' + durationSeconds; }
-//     if(currentMinutes < 10 ){currentMinutes = '0' + currentMinutes; }
-//     if(durationMinutes < 10 ){durationMinutes = '0' + durationMinutes; }
-
-//     current_time.textContent = currentMinutes + ':' + currentSeconds;
-//     duration_time.textContent = durationMinutes + ':' + durationMinutes;
-
-
-  
-// }
-
-function seekTo(){
-  let seekto = current_music.currentTime;
-  range_control.value = seekto;
+function goTo(){
+  let goto = current_music.duration * (range_control.value / 100);
+  current_music.currentTime = goto;
 }
 
+function update(){
+  let goingPosition = 0;
+  if(!isNaN(current_music.duration)){
+    goingPosition = current_music.duration * (100 / current_music.duration);
+    range_control.value = goingPosition;
 
-// function setUpdate(){
-//   let seekPosition = 0;
-//   if(!isNaN(current_music.duration)){
-//       seekPosition = current_music.currentTime * (100 / current_music.duration);
-//       range_control.value = seekPosition;
+    let currMinutes = Math.floor(current_music.currentTime / 60);
+    let currSeconds = Math.floor(current_music.currentTime - currMinutes * 60);
+    let duraMinutes = Math.floor(current_music.duration / 60);
+    let duraSeconds = Math.floor(current_music.duration - duraMinutes * 60);
 
-//       let currentMinutes = Math.floor(current_music.currentTime / 60);
-//       let currentSeconds = Math.floor(current_music.currentTime - currentMinutes * 60);
-//       let durationMinutes = Math.floor(current_music.duration / 60);
-//       let durationSeconds = Math.floor(current_music.duration - durationMinutes * 60);
+    if(currSeconds < 10) {currSeconds = "0" + currSeconds; }
+    if(duraSeconds < 10) { duraSeconds = "0" + duraSeconds; }
+    if(currMinutes < 10) {currMinutes = "0" + currMinutes; }
+    if(duraMinutes < 10) { duraMinutes = "0" + duraMinutes; }
 
-//       if(currentSeconds < 10) {currentSeconds = "0" + currentSeconds; }
-//       if(durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
-//       if(currentMinutes < 10) {currentMinutes = "0" + currentMinutes; }
-//       if(durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
+    current_time.textContent = currMinutes + ":" + currSeconds;
+    duration_time.textContent = duraMinutes + ":" + duraMinutes;
+  }
+}
 
-//       current_time.textContent = currentMinutes + ":" + currentSeconds;
-//       duration_time.textContent = durationMinutes + ":" + durationMinutes;
-//   }
-// }
