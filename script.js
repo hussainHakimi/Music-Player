@@ -23,15 +23,15 @@ const music_list = [
   },
   {
     img : 'images/DonyaSoft Wallpaper (26).jpg',
-    name : 'one night in dubai',
-    artist : 'Arash',
-    music : 'musics/Arash via helena, 1 night in dubai.mp3'
+    name : 'Ay_Dele_Khodam',
+    artist : 'Alireza_Talischi',
+    music : 'musics/Alireza_Talischi_-_Ay_Dele_Khodam_-_Ali_Edris_Remix.m4a'
   },
   {
     img : 'images/DonyaSoft Wallpaper (26).jpg',
-    name : 'To Bekhand',
-    artist : 'Ahamad Saeedi',
-    music : 'musics/Ahmad saeedi to bekhand.mp3'
+    name : 'Dor Doneh',
+    artist : 'Pooyad',
+    music : 'musics/Pooyad Moradi - Dor Doneh Yar.mp3'
   }
 ];
 
@@ -52,16 +52,18 @@ function loadMusic(index) {
 
 
 function playPause(){
-  if (isplaying === true){
-      current_music.pause();
-      isplaying = false;
-      music_img.classList.remove('rotate');
-    
-  }else{
-      current_music.play();
-      isplaying = true;
-      music_img.classList.add('rotate');
-  }
+  isplaying ? pauseMusic() : playMusic();
+}
+
+function pauseMusic(){
+  isplaying = false;
+  current_music.pause();
+  music_img.classList.remove('rotate');
+}
+function playMusic(){
+  isplaying = true;
+  current_music.play();
+  music_img.classList.add('rotate');
 }
 
 play.addEventListener('click', () => {
@@ -92,5 +94,26 @@ function update(){
     current_time.textContent = currMinutes + ":" + currSeconds;
     duration_time.textContent = duraMinutes + ":" + duraMinutes;
   }
+}
+
+
+function prevMucis(){
+  if(index > 0){
+    index -= 1;
+  }else{
+    index = music_list.length - 1;
+  }
+  playMusic();
+}
+
+function nextMusic(){
+  if(index < music_list.length -1){
+    index += 1;
+  }else{
+    index = 0;
+  }
+  loadMusic(index);
+  current_music.play();
+  playMusic();
 }
 
