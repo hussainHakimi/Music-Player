@@ -195,6 +195,14 @@ margin-bottom: 50px;
     width: 60px;
     height: 60px;
 }
+
+
+.btnNext, .btnBack{
+    background-color: red;
+}
+.btnNext i, .btnBack i{
+    color: #000;
+}
 /* ========================================= MAKING RESPONSVE ================================= */
 /* 
 @media (min-width:360px){
