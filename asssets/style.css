@@ -37,8 +37,8 @@ body{
     margin: -350px auto 0 auto;
  
 }
-.img-section .disk{
-   background: url('/img/coverimg1.jpg') no-repeat;
+.img-section img{
+   /* background: url('/img/coverimg1.jpg') no-repeat; */
     width: 280px;
     height:280px;
     background-color: var(--ark);
@@ -52,7 +52,7 @@ body{
 }
 
 .img-section .imgduration{
-    animation: rotate 20s linear infinite;
+    animation: rotate 10s  linear alternate-reverse;
 }
 @keyframes rotate{
     100%{
@@ -88,12 +88,15 @@ margin-bottom: 50px;
 .range-control{
     -webkit-appearance: none;
     width: 100%;
-    height: 0.5rem;
+    height: 0.3rem;
     border-radius: 10px;
     background-color: var(--light);
     cursor: pointer;
     overflow: hidden;
     
+}
+.range-control:hover{
+    height: 0.9rem;
 }
 .range-control::-webkit-slider-thumb{
     -webkit-appearance: none;
@@ -110,52 +113,64 @@ margin-bottom: 50px;
     right: 0;
 }
 .controls{
-    width: 60%;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin: auto;
+
     margin-top: 30px 0px;
     
 
 
 }
-.ply_btn{
-    position: relative;
-    width: 60px;
-    height: 60px;
+/* .ply_btn{
+   
     border-radius: 50%;
     background-color: hsl(204, 29%, 93%);
     cursor: pointer;
     border: none;
 }
-.ply_btn span{
+.ply_btn .play{
+    position: absolute;
+    top:20%;
+    left: 15%;
+}
+.paus_svg{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    display: none;
+} */
+/* .ply_btn span{
     position: absolute;
     top: 50%;
+    right:-20%; */
+
+    /* transform: translateY(-50%); */
+    /* width: 6px ; */
+    /* height: 24px; */
+    /* border-radius: 2px; */
+    /* background: var(--dark); */
+    /* transition: .5s; */
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+ /* } */
+ /* .ply_btn .paus{
     left: 33%;
-    transform: translateY(-50%);
-    width: 6px ;
-    height: 24px;
-    border-radius: 2px;
-    background: var(--dark);
-    transition: .5s;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-.ply_btn span:nth-child(2){
-    left: 55%;
     transform-origin: center;
 }
-.ply_btn.pause span:nth-child(2){
+.ply_btn.pause .paus{
     transform: translateY(-50%) scaleY(0);
 }
-.ply_btn.pause span:nth-child(1){
-    width: 35%;
-    left: 53%;
+.ply_btn.pause .play{
+    /* width: 35%; */
+    /* left: 53%;
     transform: translate(-50%,-50%);
     border-radius: 0;
     clip-path:polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
-}
-.ply_btn.pause{
+/* } * */
+
+/* .ply_btn.pause{
     animation: pluse 2s linear infinite;
 }
 @keyframes pluse{
@@ -169,9 +184,9 @@ margin-bottom: 50px;
         box-shadow: 0 0 0 5px rgba(255, 255, 255, .5);
 
     }
-}
+} */
 /* btns styles */
-.controls .btn{
+/* .controls .btn{
     width: 60px;
     height: 60px ;
     background: #ddd;
@@ -194,9 +209,9 @@ margin-bottom: 50px;
     }
 }
 .controls img{
-    width: 60px;
-    height: 60px;
-}
+    width: 40px;
+    height: 40px;
+} */
 /* ========================================= MAKING RESPONSVE ================================= */
 /* 
 @media (min-width:360px){

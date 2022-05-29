@@ -2,6 +2,8 @@ Arash tasks:
  - Add font awesome to project
  - Change font type to "Poppins"
  - Added the next fuctionality audio when click the next btn forward 5sec
+ -  add the background alive to move
+ - added the next btn
 
 
 
