@@ -3,7 +3,7 @@ const music_img = document.querySelector('.music-img');
 const music_name = document.querySelector('.music_name');
 const music_artist = document.querySelector('.music_artist');
 const range_control = document.querySelector('.range-control');
-let current_time = document.querySelector('.current_time');
+const current_time = document.querySelector('.current_time');
 const duration_time = document.querySelector('.duration_time');
 const btnBack = document.querySelector('.btnBack');
 const play = document.querySelector('.ply_btn');
@@ -58,15 +58,19 @@ function pauseMusic(){
   isplaying = false;
   current_music.pause();
   music_img.classList.remove('rotate');
+  play.innerHTML = '<i class="fa fa-play-circle fa-5x" style="color:black;"></i>';
 }
 function playMusic(){
   isplaying = true;
   current_music.play();
   music_img.classList.add('rotate');
+  play.innerHTML = '<i class="fas fa-pause-circle  fa-5x" style="color:black;"></i>';
 }
 
-play.addEventListener('click', () => {
+play.addEventListener('keydown', (e) => {
+  if(e.keyCode === 32){
   play.classList.toggle('pause');
+}
 });
 
 function goTo(){
@@ -125,3 +129,9 @@ function fastForward(){
 function fastBackward(){
   current_music.currentTime -= 10;
 }
+
+window.addEventListener('keydown', function(e){
+  if(e.keyCode ===32){
+    playPause();
+  }
+});
