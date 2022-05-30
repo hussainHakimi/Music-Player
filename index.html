@@ -7,15 +7,27 @@
     <title>Music Player</title>
     <link rel="stylesheet" href="./asssets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/asssets/css/style.css">
 </head>
 <body>
     <audio src="" id="audio"></audio>
+    
     <div class="container">
-        <div class="box">
-            <div class="img-section">
+            <!-- the top menu bar -->
+            <div class="topmenu">
+                <span>one</span>
+                <span>tow </span>
+                <span>thre</span>
+            </div>
+            <!-- start box -->
+            <div class="box">
+                
+                <div class="img-section">
+                <!-- img sectioonmn  -->
                 <img class="img " src="" alt="">
             </div>
            <div class="details ">
+            
                <h1 class="music_name">music name</h1>
                <p class="music_artist">artist</p>
                <div class="song_slider">
@@ -24,12 +36,12 @@
                    <span class="duration_time">00:00</span>
                 </div>
                    <div class="controls">
-                       <div class="btn btnBack"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <div class="btn backButton"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20.24 7.22005V16.7901C20.24 18.7501 18.11 19.98 16.41 19L12.26 16.61L8.10996 14.21C6.40996 13.23 6.40996 10.78 8.10996 9.80004L12.26 7.40004L16.41 5.01006C18.11 4.03006 20.24 5.25005 20.24 7.22005Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M3.76001 18.1801V5.82007" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         </div>
-                       <div class="btn btnBack"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <div class="btn btnBack_15"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.96 10.8301H12.9L12.14 13.1201H14.43C15.27 13.1201 15.96 13.8001 15.96 14.6501C15.96 15.4901 15.28 16.1801 14.43 16.1801H12.14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M9.54004 16.17V10.8301L8.04004 12.5001" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M10.02 4.46997L12 2" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -44,14 +56,14 @@
                             </span>
                            <!-- <span><img id="pause_svg" src="./Video-Audio-Image/vuesax/linear/pause.svg" alt=""></span> -->
                        </div>
-                       <div class="btn btnNext"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <div class="btn btnNext_15"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.9601 10.8301H12.9001L12.1401 13.1201H14.4301C15.2701 13.1201 15.9601 13.8001 15.9601 14.6501C15.9601 15.4901 15.2801 16.1801 14.4301 16.1801H12.1401" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M9.54004 16.17V10.8301L8.04004 12.5001" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M13.98 4.46997L12 2" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M19.0899 7.79999C20.1999 9.27999 20.8899 11.11 20.8899 13.11C20.8899 18.02 16.9099 22 11.9999 22C7.08988 22 3.10986 18.02 3.10986 13.11C3.10986 8.19999 7.08988 4.21997 11.9999 4.21997C12.6799 4.21997 13.3399 4.31002 13.9799 4.46002" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         </div>
-                       <div class="btn btnNext"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <div class="btn nextButton"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.76001 7.22005V16.7901C3.76001 18.7501 5.89 19.98 7.59 19L11.74 16.61L15.89 14.21C17.59 13.23 17.59 10.78 15.89 9.80004L11.74 7.40004L7.59 5.01006C5.89 4.03006 3.76001 5.25005 3.76001 7.22005Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M20.24 18.1801V5.82007" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -59,10 +71,14 @@
                    </div>
             </div>
         </div>
-        </div>
-
-        
+        <!-- end of box -->
+<!-- star footer -->
+<div class="footer">
+    <span>one </span>
+    <span>tow</span>
+    <span>tow</span>
 </div>
+        </div>
 <script src="./asssets/script.js"></script>
 </body>
 </html>
