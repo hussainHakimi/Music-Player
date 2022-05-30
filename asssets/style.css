@@ -15,22 +15,31 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--dark);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: rgb(73,173,201);
+    background: rgb(200,73,201);
+    background: radial-gradient(circle, rgba(200,73,201,1) 14%, rgba(146,105,215,1) 26%, rgba(174,114,198,1) 62%, rgba(209,75,188,1) 94%);
 }
 .container{
     position: relative;
+
+}
+
+    .container{
+    margin: 0 auto;
+    width: 400px;
+    min-height: 90vh;
+    border-radius: 2px;
+    background: rgb(158,76,190);
+    background: linear-gradient(0deg, rgba(158,76,190,1) 8%, rgba(212,115,185,1) 82%);
+    box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    color: rgb(251, 239, 239);
+    padding: 30px;
+}
+.box{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
-    height: 100vh;
-    border-radius: 20px;
-    background:rgba(193, 19, 19, 0.001);
-    box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    overflow: hidden;
-    color: rgb(251, 239, 239);
 }
 
 .img-section{
@@ -39,25 +48,33 @@ body{
 }
 .img-section img{
    /* background: url('/img/coverimg1.jpg') no-repeat; */
-    width: 280px;
-    height:280px;
+    width: 220px;
+    height:220px;
     background-color: var(--ark);
     border-radius: 50%;
-    position: relative;
     display: block;
-    margin: 60px auto;
+    margin: 200px auto 10px auto;
     background-size: cover;
     box-shadow: 1px -1px 40px 17px rgba(52, 198, 200, 0.6);
     
 }
 
 .img-section .imgduration{
-    animation: rotate 10s  linear alternate-reverse;
+    animation: rotate 20s  linear infinite;
 }
 @keyframes rotate{
     100%{
         transform: rotate(360deg);
     }
+}
+/* top  menu */
+.topmenu{
+    position: absolute;
+    top:0;
+    display: flex;
+    align-content: space-around;
+    flex: 3fr;
+
 }
 .details{
   position: absolute;
@@ -105,6 +122,11 @@ margin-bottom: 50px;
     background-color: #ddd;
     box-shadow: -400px 0 0 400px #fff;
 }
+
+.controls div svg{
+    cursor: pointer;
+
+}
 .current_time,.duration_time{
     font-size: 1rem;
 }
@@ -123,6 +145,20 @@ margin-bottom: 50px;
     
 
 
+}
+
+/* footer styles */
+.footer{
+    width: 100%;
+    background-color: aliceblue;
+    bottom: 0;
+    position: fixed;        
+    padding: 10px 20px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 /* .ply_btn{
    
