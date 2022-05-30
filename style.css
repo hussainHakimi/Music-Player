@@ -116,65 +116,20 @@ margin-bottom: 50px;
 
 
 }
-.ply_btn{
-    position: relative;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: hsl(204, 29%, 93%);
-    cursor: pointer;
-    border: none;
-}
-.ply_btn span{
-    position: absolute;
-    top: 50%;
-    left: 33%;
-    transform: translateY(-50%);
-    width: 6px ;
-    height: 24px;
-    border-radius: 2px;
-    background: var(--dark);
-    transition: .5s;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-.ply_btn span:nth-child(2){
-    left: 55%;
-    transform-origin: center;
-}
-.ply_btn.pause span:nth-child(2){
-    transform: translateY(-50%) scaleY(0);
-}
-.ply_btn.pause span:nth-child(1){
-    width: 35%;
-    left: 53%;
-    transform: translate(-50%,-50%);
-    border-radius: 0;
-    clip-path:polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
-}
-.ply_btn.pause{
-    animation: pluse 2s linear infinite;
-}
-@keyframes pluse{
-    0%{
-        box-shadow: 0;
-    }
-    50%{
-        box-shadow: 0 0 0 5px rgba(255, 255, 255, .1);
-    }
-    100%{
-        box-shadow: 0 0 0 5px rgba(255, 255, 255, .5);
 
-    }
-}
 /* btns styles */
-
+.controls{
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+}
 .controls .btn{
     width: 47px;
     height: 47px ;
     background: #ddd;
     border-radius: 50%;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     border: none;
     cursor: pointer;
@@ -182,6 +137,10 @@ margin-bottom: 50px;
     color: #000;
     }
 .btnNext{
+
+}
+.btnBack{
+
 }
 
 @keyframes rotate{
@@ -198,11 +157,10 @@ margin-bottom: 50px;
 }
 
 
-.btnNext, .btnBack{
-    background-color: red;
-}
-.btnNext i, .btnBack i{
+.btnNext i, .btnBack i , .fast-backward, .fast-forward{
     color: #000;
+    display: flex;
+    justify-content:space-between;
 }
 /* ========================================= MAKING RESPONSVE ================================= */
 /* 
