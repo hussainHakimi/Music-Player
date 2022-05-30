@@ -56,10 +56,10 @@ margin: -350px auto 0 auto;
     }
 }
 .details{
-  position: absolute;
-  top: 60%;
-  width: 90%;
-  left: 6%;
+    position: absolute;
+    top: 60%;
+    width: 90%;
+    left: 6%;
 
 }
 
@@ -167,9 +167,10 @@ margin-bottom: 50px;
     }
 }
 /* btns styles */
+
 .controls .btn{
-    width: 60px;
-    height: 60px ;
+    width: 47px;
+    height: 47px ;
     background: #ddd;
     border-radius: 50%;
     display: flex;
@@ -177,9 +178,9 @@ margin-bottom: 50px;
     align-items: center;
     border: none;
     cursor: pointer;
-    margin-left: -30px;
-    margin-right: -30px;
-}
+    margin: 10px;
+    color: #000;
+    }
 .btnNext{
 }
 
