@@ -3,7 +3,7 @@ const music_img = document.querySelector('.music-img');
 const music_name = document.querySelector('.music_name');
 const music_artist = document.querySelector('.music_artist');
 const range_control = document.querySelector('.range-control');
-const current_time = document.querySelector('.current_time');
+let current_time = document.querySelector('.current_time');
 const duration_time = document.querySelector('.duration_time');
 const btnBack = document.querySelector('.btnBack');
 const play = document.querySelector('.ply_btn');
@@ -45,7 +45,6 @@ function loadMusic(index) {
   music_artist.textContent = music_list[index].artist;
   music_img.src = music_list[index].img;
   current_time.innerHTML = '00:00';
-  
   timer = setInterval(update, 1000);
 
 }
@@ -71,8 +70,8 @@ play.addEventListener('click', () => {
 });
 
 function goTo(){
-  let goto = current_music.duration * (range_control.value / 100);
-  current_music.currentTime = goto;
+  let gotoo = current_music.duration * (range_control.value / 100);
+  current_music.currentTime = gotoo;
 }
 
 function update(){
@@ -103,6 +102,7 @@ function prevMucis(){
   }else{
     index = music_list.length - 1;
   }
+  loadMusic();
   playMusic();
 }
 
@@ -113,7 +113,15 @@ function nextMusic(){
     index = 0;
   }
   loadMusic(index);
-  current_music.play();
   playMusic();
 }
 
+
+
+function fastForward(){
+  current_music.currentTime += 10;
+}
+
+function fastBackward(){
+  current_music.currentTime -= 10;
+}
