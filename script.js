@@ -144,6 +144,5 @@ window.addEventListener('keydown', function(e){
     fastBackward();
   }
 
-  console.log(e.keyCode);
 });
 
