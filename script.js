@@ -1,3 +1,4 @@
+const container = document.querySelector('.container');
 const img_section = document.querySelector('.img-section');
 const music_img = document.querySelector('.music-img');
 const music_name = document.querySelector('.music_name');
@@ -45,9 +46,23 @@ function loadMusic(index) {
   music_artist.textContent = music_list[index].artist;
   music_img.src = music_list[index].img;
   current_time.innerHTML = '00:00';
+  // setTimeout(() => {
+    // range_control.max=current_music.duration;
+    // duration_time.innerHTML=update(range_control.max);
+  // }, 300);
   timer = setInterval(update, 1000);
 
+  // container.style.backgroundImage = url(`music_list[index].img`);
 }
+// setInterval(() => {
+//   range_control.value=current_music.current_time;
+//    current_time.innerHTML=update(current_music.current_time);
+  
+// }, 1000);
+
+//  range_control.addEventListener('change', ()=>{
+//    current_music.current_time=range_control.value;
+//  });
 
 
 function playPause(){
@@ -81,7 +96,7 @@ function goTo(){
 function update(){
   let goingPosition = 0;
   if(!isNaN(current_music.duration)){
-    goingPosition = current_music.duration * (100 / current_music.duration);
+    goingPosition = current_music.duration / (100 * current_music.duration);
     range_control.value = goingPosition;
 
     let currMinutes = Math.floor(current_music.currentTime / 60);
@@ -106,7 +121,7 @@ function prevMucis(){
   }else{
     index = music_list.length - 1;
   }
-  loadMusic();
+  loadMusic(index);
   playMusic();
 }
 
@@ -133,5 +148,18 @@ function fastBackward(){
 window.addEventListener('keydown', function(e){
   if(e.keyCode ===32){
     playPause();
+  }else if(e.keyCode === 34){
+    nextMusic();
   }
+  else if(e.keyCode === 33){
+    prevMucis();
+  }
+  else if(e.keyCode === 39){
+    fastForward();
+  }else if(e.keyCode === 37){
+    fastBackward();
+  }
+
+  console.log(e.keyCode);
 });
+
