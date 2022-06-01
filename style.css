@@ -46,6 +46,7 @@ margin: -350px auto 0 auto;
     margin: 60px auto;
     background-size: cover;
     box-shadow: 1px -1px 40px 17px rgba(52, 198, 200, 0.6);
+    z-index: 3;
 }
 .rotate{
     animation: rotate 25s linear infinite;
@@ -91,11 +92,27 @@ margin-bottom: 50px;
     overflow: hidden;
     
 }
+/* .range-control::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background:white;
+    border: 1px solid #3774ff;
+    cursor: pointer;
+    }
+    
+.range-control:hover{
+        opacity: 1;
+    } */
+
 .range-control::-webkit-slider-thumb{
     -webkit-appearance: none;
     width: 1px;
     height: 20px;
-    background-color: #ddd;
+    background-color:red;
     box-shadow: -400px 0 0 400px #fff;
 }
 .current_time,.duration_time{
@@ -106,23 +123,19 @@ margin-bottom: 50px;
     right: 0;
 }
 .controls{
-    width: 60%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: auto;
     margin-top: 30px 0px;
+    width: 100%;
     
 
 
 }
 
 /* btns styles */
-.controls{
-    width: 100%;
-    display:flex;
-    justify-content: space-around;
-}
+
 .controls .btn{
     width: 47px;
     height: 47px ;
@@ -162,17 +175,56 @@ margin-bottom: 50px;
     display: flex;
     justify-content:space-between;
 }
-/* ========================================= MAKING RESPONSVE ================================= */
-/* 
-@media (min-width:360px){
-    .box{
-        width: 70%;
-    }
-    .img{
-        width: 100px;
-        height: 100px;
-    }
+
+
+i,
+i.fa-play-circle,
+i.fa-puase-circle,
+i.fa-step-backward,
+i.fa-step-forward,
+i.fast-backward,
+i.fast-forward
+{
+    cursor: pointer;
 }
+/* ========================================= MAKING RESPONSVE ================================= */
+@media (max-width:760px){
+    .container{
+        width: 100%;
+        height: 100vh;
+    }
+    .img-section .music-img{
+        width: 200px;
+        height: 200px;   
+    }
+    .fa-play-circle, .fa-pause-circle{
+        font-size: 3em;
+    }
+    .fa-backward,
+    .fa-forward{
+        font-size: 1.4em;
+    }
+    .fast-backward,
+    .fast-forward{
+        font-size: .7em;
+    }
+
+    
+    .img-section{
+    margin: -280px auto 0 auto;
+    }
+
+    .music_artist{
+        font-size: 1rem;
+        margin-bottom: 50px;
+        }
+        .music_name{
+            font-size: 2rem;
+        }
+
+}
+
+/* 
 
 @media (min-width: 600px){
     .container{
