@@ -46,24 +46,8 @@ function loadMusic(index) {
   music_artist.textContent = music_list[index].artist;
   music_img.src = music_list[index].img;
   current_time.innerHTML = '00:00';
-  // setTimeout(() => {
-    // range_control.max=current_music.duration;
-    // duration_time.innerHTML=update(range_control.max);
-  // }, 300);
   timer = setInterval(update, 1000);
-
-  // container.style.backgroundImage = url(`music_list[index].img`);
 }
-// setInterval(() => {
-//   range_control.value=current_music.current_time;
-//    current_time.innerHTML=update(current_music.current_time);
-  
-// }, 1000);
-
-//  range_control.addEventListener('change', ()=>{
-//    current_music.current_time=range_control.value;
-//  });
-
 
 function playPause(){
   isplaying ? pauseMusic() : playMusic();
@@ -96,7 +80,7 @@ function goTo(){
 function update(){
   let goingPosition = 0;
   if(!isNaN(current_music.duration)){
-    goingPosition = current_music.duration / (100 * current_music.duration);
+    goingPosition = current_music.currentTime * (100 / current_music.duration);
     range_control.value = goingPosition;
 
     let currMinutes = Math.floor(current_music.currentTime / 60);

@@ -18,9 +18,8 @@ body{
     align-items: center;
     /* background-color: var(--dark); */
     font-family: 'Times New Roman', Times, serif;
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    
+    background: rgb(219, 118, 205);
+    background: linear-gradient(90deg, rgb(181, 108, 171) 9%, rgb(34, 73, 73) 87%, rgb(23, 84, 84) 93%); */
 }
 .container{
     position: relative;
@@ -35,8 +34,9 @@ body{
     padding: 30px;
     overflow: hidden;
     color: rgb(251, 239, 239);
-    background: rgb(63,94,251);
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,252,98,1) 100%);
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+
 }
 
 .img-section{
@@ -89,16 +89,18 @@ margin-bottom: 50px;
     font-size: 3rem;
 }
 .range-control{
+    cursor: pointer;    
     -webkit-appearance: none;
-    width: 100%;
+    -moz-appearance: none;
+    appearance: none;
     height: 5px;
-    border-radius: 10px;
-    background-color: var(--light);
-    cursor: pointer;
-    overflow: hidden;
-    
+    background: #f1f1f1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    width: 100%;
 }
-/* .range-control::-webkit-slider-thumb{
+
+.range-control::-webkit-slider-thumb{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -108,18 +110,6 @@ margin-bottom: 50px;
     background:white;
     border: 1px solid #3774ff;
     cursor: pointer;
-    }
-    
-.range-control:hover{
-        opacity: 1;
-    } */
-
-.range-control::-webkit-slider-thumb{
-    -webkit-appearance: none;
-    width: 1px;
-    height: 20px;
-    background-color:red;
-    box-shadow: -400px 0 0 400px #fff;
 }
 .current_time,.duration_time{
     font-size: 1rem;
