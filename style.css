@@ -235,9 +235,3 @@ i.fast-forward
         height: 150px;
     }
 }
-
-@media (min-width:1024) and (max-width:1200px){
-    .box{
-        width: 30%;
-    }
-} */
