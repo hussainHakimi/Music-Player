@@ -120,7 +120,7 @@ function nextMusic(){
 }
 
 
-
+// Fast Forwarding
 function fastForward(){
   current_music.currentTime += 10;
 }
