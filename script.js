@@ -130,6 +130,7 @@ function fastBackward(){
   current_music.currentTime -= 10;
 }
 
+//  Events for Key words like space, page down and page up.
 window.addEventListener('keydown', function(e){
   if(e.keyCode ===32){
     playPause();
