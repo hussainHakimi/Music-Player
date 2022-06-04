@@ -59,6 +59,7 @@ function pauseMusic(){
   music_img.classList.remove('rotate');
   play.innerHTML = '<i class="fa fa-play-circle fa-5x" style="color:black;"></i>';
 }
+
 function playMusic(){
   isplaying = true;
   current_music.play();
