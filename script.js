@@ -125,6 +125,7 @@ function fastForward(){
   current_music.currentTime += 10;
 }
 
+// Fast Backward
 function fastBackward(){
   current_music.currentTime -= 10;
 }
